@@ -1,7 +1,10 @@
-# Metadata for the Correspondence between Public Comments and the Final Plan Revisions
+# Dataset of "Leveraging LLMs to Evaluate Public Comments on Japan's Environmental Plans"
 
-## Title
-Correspondence between Public Comments and Revisions in the Sixth Basic Environment Plan (Draft to Final Proposal)
+## Related Document
+
+- An draft paper with detailed explanation will be published on the [Kohei Ishii: "Leveraging LLMs to Evaluate Public Comments on Japan's Environmental Plans"](https://2025.iaia.org/draft-papers/1192_Ishii_Leveraging_LLMs_to_Evaluate.pdf). 
+- Presentation material used in IAIA2025 is attached in [./docs/1192_ishii.pptx](./docs/IAIA25_1192_ishii.pptx)
+- Additional details on the public comment analysis (`6thPC_AnalysisData_full_20250209.csv`) presented at the 2025 Annual Conference of the Japanese Society for Artificial Intelligence (JSAI2025) will be added afterwards.
 
 ## Creator
 - Akihiro Kameda (亀田 尭宙)  
@@ -13,7 +16,7 @@ Correspondence between Public Comments and Revisions in the Sixth Basic Environm
     - Position: Ph.D. Student  
 
 ## Description
-This dataset documents the relationship between public comments and subsequent revisions made between two versions of the Sixth Basic Environment Plan. It provides structured analysis on whether and how revisions reflected public input.
+This dataset documents the relationship between public comments and subsequent revisions made between two versions of the Sixth Basic Environment Plan. It provides structured analysis on whether and how revisions reflected public input. The dataset builds upon the correspondence between public comments and revisions in the Sixth Basic Environment Plan (Draft to Final Proposal), and is supported by structured metadata for the correspondence between public comments and the final plan revisions.
 
 ### Columns in `diff_and_corresp.csv` (final output):
 - **Column A**: Assigned ID of each revision  
@@ -38,9 +41,6 @@ Japanese
 
 ## Repository URL
 [https://github.com/cm3/iaia2025data](https://github.com/cm3/iaia2025data)
-
-## Related Document
-An abstract with detailed explanation will be published on the [IAIA2025 Website](https://2025.iaia.org/pages/abstract.php). Additional details on the public comment analysis presented at the 2025 Annual Conference of the Japanese Society for Artificial Intelligence (JSAI2025) will be added.
 
 ## Notes
 - The classification and matching scripts (`chatgpt_classify.py`, `get_corresp.py`) make use of the OpenAI API via the environment variable `OPENAI_API_KEY`. No API keys are hardcoded in the scripts.
