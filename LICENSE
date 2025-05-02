@@ -1,0 +1,17 @@
+This repository contains research data and scripts related to the analysis of public comments and revisions in the Sixth Basic Environment Plan.
+
+## License Summary
+
+- All CSV and HTML files are licensed under:
+  Creative Commons Attribution 4.0 International (CC BY 4.0)
+  https://creativecommons.org/licenses/by/4.0/
+
+- All Python script files (*.py) are licensed under:
+  METS License
+  https://www.loc.gov/standards/mets/METS-LICENSE.txt
+
+Please cite the dataset and the authors appropriately when reusing any component of this repository.
+
+Authors:
+- Akihiro Kameda (ORCID: 0000-0002-5439-6456)
+- Kohei Ishii

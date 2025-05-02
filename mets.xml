@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets xmlns="http://www.loc.gov/METS/" 
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:premis="http://www.loc.gov/premis/v3"
+      OBJID="cm3:iaia2025data"
+      TYPE="dataset"
+      PROFILE="jpcoar2"
+      LABEL="Correspondence between Public Comments and Revisions in the Sixth Basic Environment Plan"
+      VERSION="2.0">
+
+  <metsHdr CREATEDATE="2025-05-02">
+    <agent ROLE="CREATOR" TYPE="INDIVIDUAL">
+      <name>Akihiro Kameda</name>
+    </agent>
+    <agent ROLE="CREATOR" TYPE="INDIVIDUAL">
+      <name>Kohei Ishii</name>
+    </agent>
+  </metsHdr>
+
+  <!-- Metadata -->
+  <mdSec ID="jpcoar_metadata">
+    <mdWrap MDTYPE="OTHER" OTHERMDTYPE="JPcoar">
+      <xmlData>
+        <jpcoar:jpcoar xmlns:jpcoar="https://github.com/JPCOAR/schema/blob/main/jpcoar_v2.0.xsd">
+          <jpcoar:title xml:lang="en">Correspondence between Public Comments and Revisions in the Sixth Basic Environment Plan (Draft to Final Proposal)</jpcoar:title>
+          <jpcoar:creator>
+            <jpcoar:creatorName>Akihiro Kameda</jpcoar:creatorName>
+            <jpcoar:affiliation>National Institutes for the Humanities</jpcoar:affiliation>
+            <jpcoar:identifier identifierType="ORCID">0000-0002-5439-6456</jpcoar:identifier>
+          </jpcoar:creator>
+          <jpcoar:creator>
+            <jpcoar:creatorName>Kohei Ishii</jpcoar:creatorName>
+            <jpcoar:affiliation>Chiba University</jpcoar:affiliation>
+          </jpcoar:creator>
+          <jpcoar:description xml:lang="en">
+            This dataset documents the relationship between public comments and subsequent revisions made between two versions of the Sixth Basic Environment Plan. It provides structured analysis on whether and how revisions reflected public input.
+          </jpcoar:description>
+          <jpcoar:resourceType resourceType="dataset">Dataset</jpcoar:resourceType>
+          <jpcoar:language>jpn</jpcoar:language>
+          <jpcoar:date>
+            <jpcoar:dateValue>2025-05-02</jpcoar:dateValue>
+            <jpcoar:dateType>Issued</jpcoar:dateType>
+          </jpcoar:date>
+          <jpcoar:rights>
+            <jpcoar:rightsURI>https://creativecommons.org/licenses/by/4.0/</jpcoar:rightsURI>
+            <jpcoar:rightsName>CC BY 4.0</jpcoar:rightsName>
+          </jpcoar:rights>
+          <jpcoar:relation>
+            <jpcoar:relationType>isDescribedBy</jpcoar:relationType>
+            <jpcoar:relatedIdentifier relatedIdentifierType="URI">https://2025.iaia.org/pages/abstract.php</jpcoar:relatedIdentifier>
+          </jpcoar:relation>
+          <jpcoar:relation>
+            <jpcoar:relationType>isDescribedBy</jpcoar:relationType>
+            <jpcoar:relatedIdentifier relatedIdentifierType="URI">https://github.com/cm3/iaia2025data</jpcoar:relatedIdentifier>
+          </jpcoar:relation>
+        </jpcoar:jpcoar>
+      </xmlData>
+    </mdWrap>
+  </mdSec>
+
+  <!-- ライセンス: CC BY 4.0 -->
+  <amdSec ID="amd_csv_license">
+    <rightsMD>
+      <mdWrap MDTYPE="OTHER" OTHERMDTYPE="LICENSE">
+        <xmlData>
+          <rights>
+            <rightsStatement>Creative Commons Attribution 4.0 International</rightsStatement>
+            <rightsURI>https://creativecommons.org/licenses/by/4.0/</rightsURI>
+          </rights>
+        </xmlData>
+      </mdWrap>
+    </rightsMD>
+  </amdSec>
+
+  <!-- ライセンス: METS License -->
+  <amdSec ID="amd_py_license">
+    <rightsMD>
+      <mdWrap MDTYPE="OTHER" OTHERMDTYPE="LICENSE">
+        <xmlData>
+          <rights>
+            <rightsStatement>METS License</rightsStatement>
+            <rightsURI>https://www.loc.gov/standards/mets/METS-LICENSE.txt</rightsURI>
+          </rights>
+        </xmlData>
+      </mdWrap>
+    </rightsMD>
+  </amdSec>
+  <!-- File Sections -->
+  <fileSec>
+    <fileGrp USE="preprocessing">
+      <file ID="f1" MIMETYPE="text/html" ADMID="amd_pre amd_csv_license">
+        <FLocat LOCTYPE="URL" xlink:href="preprocessing/input.html" xlink:title="HTML version of the final plan with visible changes"/>
+      </file>
+      <file ID="f2" MIMETYPE="text/x-python" ADMID="amd_pre amd_py_license">
+        <FLocat LOCTYPE="URL" xlink:href="preprocessing/extract.py" xlink:title="Script to extract differences from input.html"/>
+      </file>
+      <file ID="f3" MIMETYPE="text/csv" ADMID="amd_pre amd_csv_license">
+        <FLocat LOCTYPE="URL" xlink:href="preprocessing/diff_output.csv" xlink:title="Extracted modification entries"/>
+      </file>
+      <file ID="f4" MIMETYPE="text/x-python" ADMID="amd_pre amd_py_license">
+        <FLocat LOCTYPE="URL" xlink:href="preprocessing/merge_diff.py" xlink:title="Script to merge and group adjacent diffs"/>
+      </file>
+      <file ID="f5" MIMETYPE="text/csv" ADMID="amd_pre amd_csv_license">
+        <FLocat LOCTYPE="URL" xlink:href="preprocessing/merged_diff_output.csv" xlink:title="Merged structured list of revisions"/>
+      </file>
+    </fileGrp>
+
+    <fileGrp USE="classification">
+      <file ID="f6" MIMETYPE="text/x-python" ADMID="amd_cls amd_py_license">
+        <FLocat LOCTYPE="URL" xlink:href="classification/chatgpt_classify.py" xlink:title="Script to classify revisions via ChatGPT prompts"/>
+      </file>
+      <file ID="f7" MIMETYPE="text/csv" ADMID="amd_cls amd_csv_license">
+        <FLocat LOCTYPE="URL" xlink:href="classification/merged_with_classification.csv" xlink:title="Classification results with category and rationale"/>
+      </file>
+      <file ID="f8" MIMETYPE="text/csv" ADMID="amd_cls amd_csv_license">
+        <FLocat LOCTYPE="URL" xlink:href="classification/diff_and_corresp.csv" xlink:title="Final dataset with comment correspondence flag"/>
+      </file>
+    </fileGrp>
+
+    <fileGrp USE="matching">
+      <file ID="f9" MIMETYPE="text/csv" ADMID="amd_match amd_csv_license">
+        <FLocat LOCTYPE="URL" xlink:href="matching/6thPC_AnalysisData_full_20250209.csv" xlink:title="Evaluated public comments and government responses"/>
+      </file>
+      <file ID="f10" MIMETYPE="text/x-python" ADMID="amd_match amd_py_license">
+        <FLocat LOCTYPE="URL" xlink:href="matching/get_corresp.py" xlink:title="Script to match comments to revision entries"/>
+      </file>
+      <file ID="f11" MIMETYPE="text/csv" ADMID="amd_match amd_csv_license">
+        <FLocat LOCTYPE="URL" xlink:href="matching/pabukome_matched_changes.csv" xlink:title="Estimated comment-to-revision mapping"/>
+      </file>
+    </fileGrp>
+  </fileSec>
+
+  <!-- PREMIS Event Sections -->
+  <amdSec ID="amd_pre">
+    <digiprovMD>
+      <mdWrap MDTYPE="PREMIS:EVENT">
+        <xmlData>
+          <premis:event>
+            <premis:eventType>extraction</premis:eventType>
+            <premis:eventDateTime>2025-04-25T00:00:00Z</premis:eventDateTime>
+            <premis:eventDetail>Extracting visible diffs from the final plan using extract.py and merging with merge_diff.py</premis:eventDetail>
+            <premis:linkingAgentIdentifier>
+              <premis:linkingAgentIdentifierType>ORCID</premis:linkingAgentIdentifierType>
+              <premis:linkingAgentIdentifierValue>0000-0002-5439-6456</premis:linkingAgentIdentifierValue>
+            </premis:linkingAgentIdentifier>
+          </premis:event>
+        </xmlData>
+      </mdWrap>
+    </digiprovMD>
+  </amdSec>
+
+  <amdSec ID="amd_cls">
+    <digiprovMD>
+      <mdWrap MDTYPE="PREMIS:EVENT">
+        <xmlData>
+          <premis:event>
+            <premis:eventType>classification</premis:eventType>
+            <premis:eventDateTime>2025-04-28T00:00:00Z</premis:eventDateTime>
+            <premis:eventDetail>Classified revision types using ChatGPT with prompt instructions via chatgpt_classify.py</premis:eventDetail>
+            <premis:linkingAgentIdentifier>
+              <premis:linkingAgentIdentifierType>ORCID</premis:linkingAgentIdentifierType>
+              <premis:linkingAgentIdentifierValue>0000-0002-5439-6456</premis:linkingAgentIdentifierValue>
+            </premis:linkingAgentIdentifier>
+          </premis:event>
+        </xmlData>
+      </mdWrap>
+    </digiprovMD>
+  </amdSec>
+
+  <amdSec ID="amd_match">
+    <digiprovMD>
+      <mdWrap MDTYPE="PREMIS:EVENT">
+        <xmlData>
+          <premis:event>
+            <premis:eventType>content derivation</premis:eventType>
+            <premis:eventDateTime>2025-04-30T00:00:00Z</premis:eventDateTime>
+            <premis:eventDetail>Matching comments and revisions using get_corresp.py with focus on inferred responsiveness</premis:eventDetail>
+            <premis:linkingAgentIdentifier>
+              <premis:linkingAgentIdentifierType>ORCID</premis:linkingAgentIdentifierType>
+              <premis:linkingAgentIdentifierValue>0000-0002-5439-6456</premis:linkingAgentIdentifierValue>
+            </premis:linkingAgentIdentifier>
+          </premis:event>
+        </xmlData>
+      </mdWrap>
+    </digiprovMD>
+  </amdSec>
+
+  <!-- Logical Structure -->
+  <structMap TYPE="logical">
+    <div TYPE="dataset" LABEL="Dataset">
+      <div TYPE="process" LABEL="Preprocessing">
+        <fptr FILEID="f1"/>
+        <fptr FILEID="f2"/>
+        <fptr FILEID="f3"/>
+        <fptr FILEID="f4"/>
+        <fptr FILEID="f5"/>
+      </div>
+      <div TYPE="process" LABEL="Classification">
+        <fptr FILEID="f6"/>
+        <fptr FILEID="f7"/>
+        <fptr FILEID="f8"/>
+      </div>
+      <div TYPE="process" LABEL="Matching">
+        <fptr FILEID="f9"/>
+        <fptr FILEID="f10"/>
+        <fptr FILEID="f11"/>
+      </div>
+    </div>
+  </structMap>
+</mets>
