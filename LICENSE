@@ -1,17 +1,22 @@
-This repository contains research data and scripts related to the analysis of public comments and revisions in the Sixth Basic Environment Plan.
+This repository includes materials derived from the Central Environment Council, Ministry of the Environment Japan (環境省 中央環境審議会), as well as original analyses and code authored by the contributors listed below.
+
+Derived materials (such as plan texts and revision data) follow the Government of Japan Standard Terms of Use (Version 2.0), which is compatible with Creative Commons Attribution 4.0 International (CC BY 4.0).
+
+Original components—including classification, correspondence analysis, and all Python scripts—were created by:
+
+- Akihiro Kameda (亀田 尭宙)
+- Kohei Ishii（石井 康平）
 
 ## License Summary
 
-- All CSV and HTML files are licensed under:
-  Creative Commons Attribution 4.0 International (CC BY 4.0)
+- CSV and HTML files in `preprocessing/` are based on the Central Environment Council materials.  
+  Licensed under: Government of Japan Standard Terms of Use (Version 2.0)  
+  https://www.env.go.jp/guide/terms.html
+
+- Other CSV/HTML files:  
+  Creative Commons Attribution 4.0 International (CC BY 4.0)  
   https://creativecommons.org/licenses/by/4.0/
 
-- All Python script files (*.py) are licensed under:
-  METS License
+- Python script files (*.py):  
+  METS License  
   https://www.loc.gov/standards/mets/METS-LICENSE.txt
-
-Please cite the dataset and the authors appropriately when reusing any component of this repository.
-
-Authors:
-- Akihiro Kameda (ORCID: 0000-0002-5439-6456)
-- Kohei Ishii

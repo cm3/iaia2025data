@@ -64,8 +64,8 @@
       <mdWrap MDTYPE="OTHER" OTHERMDTYPE="LICENSE">
         <xmlData>
           <rights>
-            <rightsStatement>Creative Commons Attribution 4.0 International</rightsStatement>
-            <rightsURI>https://creativecommons.org/licenses/by/4.0/</rightsURI>
+            <rightsStatement>Government of Japan Standard Terms of Use (Version 2.0), compatible with CC BY 4.0</rightsStatement>
+            <rightsURI>https://www.env.go.jp/guide/terms.html</rightsURI>
           </rights>
         </xmlData>
       </mdWrap>

@@ -36,7 +36,8 @@ Japanese
 2025-05-02
 
 ## License
-- Dataset files (CSV/HTML): [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+- Dataset files (CSV/HTML): Government of Japan Standard Terms of Use (Version 2.0), compatible with [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).  
+  Source materials provided by the Central Environment Council, Ministry of the Environment Japan.
 - Python scripts: [METS License](https://www.loc.gov/standards/mets/METS-LICENSE.txt)
 
 ## Repository URL
