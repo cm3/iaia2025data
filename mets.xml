@@ -185,6 +185,20 @@
     </digiprovMD>
   </amdSec>
 
+  <amdSec ID="amd_fixity_manifest">
+    <digiprovMD>
+      <mdWrap MDTYPE="OTHER" OTHERMDTYPE="CHECKSUM-MANIFEST">
+        <xmlData>
+          <fixityManifest>
+          <fixityFile>manifest-sha256.txt</fixityFile>
+          <description>SHA-256 checksums for all dataset files are listed separately in this manifest file.</description>
+          <messageDigestAlgorithm>SHA-256</messageDigestAlgorithm>
+          </fixityManifest>
+        </xmlData>
+      </mdWrap>
+    </digiprovMD>
+  </amdSec>
+
   <!-- Logical Structure -->
   <structMap TYPE="logical">
     <div TYPE="dataset" LABEL="Dataset">
