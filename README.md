@@ -40,7 +40,10 @@ Japanese
 [https://github.com/cm3/iaia2025data](https://github.com/cm3/iaia2025data)
 
 ## Related Document
-An abstract with detailed explanation will be published on the [IAIA2025 Website](https://2025.iaia.org/pages/abstract.php)
+An abstract with detailed explanation will be published on the [IAIA2025 Website](https://2025.iaia.org/pages/abstract.php). Additional details on the public comment analysis presented at the 2025 Annual Conference of the Japanese Society for Artificial Intelligence (JSAI2025) will be added.
+
+## Notes
+- The classification and matching scripts (`chatgpt_classify.py`, `get_corresp.py`) make use of the OpenAI API via the environment variable `OPENAI_API_KEY`. No API keys are hardcoded in the scripts.
 
 ---
 
